@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html >
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>The Haunted House</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script>
+var currentId = 'start';
+function show(id)
+{
+    document.getElementById(currentId).style = 'display:none';
+    document.getElementById(id).style = 'display:block';
+    currentId = id;
+}
+</script>
+  </head>
+  <body>
+    <h1>
+      <a href="javascript:show('start')">The Haunted House</a>
+    </h1>
+    <div id="start">
+      <p>You're walking home from school one afternoon in January. It's
+late afternoon because you stayed after school for coding club,
+and it's already getting dark. As usual, your route takes you
+past that creepy abandoned house on your street.</p>
+      <p>You hunch your shoulders and start to hurry past, but suddenly
+a child's voice calls out from inside, “Help! Help!”</p>
+      <p>What do you do?</p>
+      <ul>
+        <li>
+          <a href="javascript:show('chicken')">Ignore the voice and continue home.</a>
+        </li>
+        <li>
+          <a href="javascript:show('front_door')">Run up to the front door and go in.</a>
+        </li>
+        <li>
+          <a href="javascript:show('back_yard')">Walk around back.</a>
+        </li>
+      </ul>
+    </div>
+    <div id="back_yard" style="display:none">
+      <p>You walk through the overgrown yard to the back of the house,
+hoping to learn something without actually going inside.
+However, all you can see of the house are pealing paint and
+darkened windows.</p>
+      <p>No wiser, you continue around to the front of the house and
+face the front door.</p>
+      <p>What do you do?</p>
+      <ul>
+        <li>
+          <a href="javascript:show('chicken')">Chicken out and continue home.</a>
+        </li>
+        <li>
+          <a href="javascript:show('front_door')">Open the front door and go in.</a>
+        </li>
+      </ul>
+    </div>
+    <div id="chicken" style="display:none">
+      <p>Feeling guilty, you pretend not to hear anything and rush home.</p>
+      <p>You make it home safe and sound, and you never hear what
+happened in the house that night. But in moments of doubt, you
+still hear that child's voice, and wonder if you might have
+prevented some horrible crime.</p>
+      <p>THE END</p>
+    </div>
+    <div id="front_door" style="display:none">
+      <p>The front door creaks loudly as you open it, and dust falls
+from the ceiling. You sneeze, stirring up more dust, then
+venture inside. The only light is from the open door behind
+you, but fortunately you have a small flashlight in your
+pocket. You pull it out and turn it on.</p>
+      <p>
+        <a href="javascript:show('entry')">Next</a>
+      </p>
+    </div>
+    <div id="entry" style="display:none">
+      <p>You're in a dark paneled entry way. Behind you is the front
+door. To your right is an opening leading to what appears
+to be a kitchen. Ahead is a large room, which your puny
+flashlight does not illuminate.</p>
+      <p>What do you do?</p>
+      <ul>
+        <li>
+          <a href="javascript:show('kitchen')">Go into the kitchen.</a>
+        </li>
+        <li>
+          <a href="javascript:show('main_room')">Continue ahead into the large room.</a>
+        </li>
+        <li>
+          <a href="javascript:show('kitty')">Call out.</a>
+        </li>
+      </ul>
+    </div>
+    <div id="kitchen" style="display:none">
+      <p>You find yourself in an old kitchen with a large cast-iron
+stove and many cabinets. You quickly search the cabinets,
+hoping to find something useful – a knife perhaps – but
+they're empty of everything except cobwebs.</p>
+      <p>Through a partially-open door in the back of the kitchen,
+you can see stairs leading down. Perhaps they lead to a
+cellar.</p>
+      <p>What do you do?</p>
+      <ul>
+        <li>
+          <a href="javascript:show('cellar')">Go down the stairs.</a>
+        </li>
+        <li>
+          <a href="javascript:show('entry')">Return to the entry way.</a>
+        </li>
+      </ul>
+    </div>
+    <div id="cellar" style="display:none">
+      <p>Pushing your way through cobwebs, you walk down the stairs
+into the dark cellar. At the bottom, your flashlight catches
+something white ahead on the stone floor. As you continue
+forward to investigate, the cobwebs around you stir with a
+sudden breeze from behind. You hear the door at the top of
+the stairs slam shut and a bolt slide ominously into place.</p>
+      <p>Now you recognize the white object on the floor: a bone,
+part of a small human skeleton. In a panic, you rush back
+up the stairs to try the door, but it won't budge. You call
+out, but the darkness seems to muffle your voice. Still you
+cry desperately for help, continuing even as your flashlight
+dims and goes out. You cry out through endless hours of
+darkness, growing increasingly parched until your voice
+emerges only as a croak. At last you cry no more.</p>
+      <p>THE END</p>
+    </div>
+    <div id="kitty" style="display:none">
+      <p>Mustering your courage, you call out loudly, “Hello! Does
+someone need help?”</p>
+      <p>There is no response at first, but then you hear a high,
+wordless voice somewhere on your left. Aiming your flashlight
+there, you see a small door, which you had overlooked before
+because it blends into the dark panelling – a closet perhaps.</p>
+      <p>Cautiously, you open the door, then laugh as a cat emerges,
+meowing pitiably. It was only a cat you heard all along!
+You let the cat outside and continue home, relieved to be
+spared any further adventure.</p>
+      <p>THE END</p>
+    </div>
+    <div id="main_room" style="display:none">
+      <p>You're in what must once have been a very elegant room.
+Ahead, a grand staircase leads upstairs. Just below the
+stairs is a very large grandfather clock. Off to the
+side is a grand piano.</p>
+      <p>What do you do?</p>
+      <ul>
+        <li>
+          <a href="javascript:show('upstairs')">Go up the stairs.</a>
+        </li>
+        <li>
+          <a href="javascript:show('clock')">Inspect the grandfather clock.</a>
+        </li>
+        <li>
+          <a href="javascript:show('entry')">Return to the entry way.</a>
+        </li>
+      </ul>
+    </div>
+    <div id="upstairs" style="display:none">
+      <p>At the top of the stairs is a long hallway with doors on
+either side. Heart pounding, you tiptoe down the hall,
+peaking into each of the rooms. You see only rotting
+bedroom furniture and thick dust, long undisturbed.</p>
+      <p>No one can have been up here for ages, you decide. The
+voice must have come from somewhere else, unless you
+imagined it. You head back down the stairs to the large
+room with the grandfather clock and the piano.</p>
+      <p>What do you do?</p>
+      <ul>
+        <li>
+          <a href="javascript:show('clock')">Inspect the grandfather clock.</a>
+        </li>
+        <li>
+          <a href="javascript:show('entry')">Return to the entry way.</a>
+        </li>
+      </ul>
+    </div>
+    <div id="clock" style="display:none">
+      <p>You take a closer look at the grandfather clock. It's not
+running, of course, but you notice something strange.
+Unlike everything else in the room, the clock is free of
+dust. Could it be concealing some clue?</p>
+      <p>You open the glass door in the front of the clock. Driven
+by some impulse you don't understand, you start the pendulum
+swinging. Suddenly, the mechanism springs to life! The
+weights begin descending, and the hands start moving
+rapidly – backwards!</p>
+      <p>A gust of wind makes the hairs on the back of your neck
+stand on end. You look up, and a pale light draws you eyes
+to the top of the stairs. There stands a small figure, a
+child. This must be the child you heard from outside, for
+now he calls out again, “Help me!” in a voice that seems to
+come from a great distance. The hilt of a knife protrudes
+from the child's chest, but there is no blood. Indeed the
+child seems utterly pale and bloodless, and looking closer
+you find you can see right through him.</p>
+      <p>What do you do?</p>
+      <ul>
+        <li>
+          <a href="javascript:show('ghost_talk')">Try to talk to the child.</a>
+        </li>
+        <li>
+          <a href="javascript:show('ghost_run')">Run away.</a>
+        </li>
+      </ul>
+    </div>
+    <div id="ghost_talk" style="display:none">
+      <p>Supressing the tremor in your voice, you say to the child,
+“Are you OK? Can I help you?”</p>
+      <p>The ghostly child looks at you and walks slowly down the
+stairs. You back away, trying to keep some distance. At
+the bottom of the stairs, the child turns left and walks
+towards the corner of the room to your right.</p>
+      <p>What do you do?</p>
+      <ul>
+        <li>
+          <a href="javascript:show('ghost_follow')">Follow the child.</a>
+        </li>
+        <li>
+          <a href="javascript:show('ghost_run')">Run away.</a>
+        </li>
+      </ul>
+    </div>
+    <div id="ghost_follow" style="display:none">
+      <p>As you approach the child, he passes right through the
+front wall of the room. Close inspection reveals a door,
+cleverly concealed in the panelling. You've heard that
+old houses sometimes have hidden side passages used by
+servants. This must be one of those.</p>
+      <p>You pull open the door and walk through a narrow passage,
+emerging into the kitchen. You can see the child to your
+left through an open door. He is on his way downstairs,
+perhaps to a cellar. On your right is an opening that
+leads to the front entrance.</p>
+      <p>What do you do?</p>
+      <ul>
+        <li>
+          <a href="javascript:show('ghost_cellar')">Follow the child downstairs.</a>
+        </li>
+        <li>
+          <a href="javascript:show('ghost_run')">Run away.</a>
+        </li>
+      </ul>
+    </div>
+    <div id="ghost_cellar" style="display:none">
+      <p>You follow the child downstairs and find him in the
+corner of the cellar looking down. At his feet is a small
+human skeleton, a child's skeleton.</p>
+      <p>“It's you, isn't it?” you say, “Someone killed you and
+hid your body down here.”</p>
+      <p>The child looks at you and nods. You promise to find out
+what happened and make sure he's properly buried. The
+child smiles for the first time and fades away. The room
+suddenly feels warmer, and you find that you are no
+longer scared.</p>
+      <p>The next day, you report what you found to the police,
+omitting any mention of ghosts. You learn that a child
+lived in that house with his mother and stepfather many
+years ago. Soon after the mother died, the stepfather
+reported the child missing, claiming he had run away.
+He was never heard from again.</p>
+      <p>You attend a small funeral for the child a week later.
+It is a sad occasion, but you are happy to know that
+the boy's spirit has at last found peace.</p>
+      <p>THE END</p>
+    </div>
+    <div id="ghost_run" style="display:none">
+      <p>In terror, you run for the front door with the child's
+voice crying out behind you. You make it outside and run
+across the front yard, finally looking over your shoulder
+as you reach the sidewalk. You see the child standing in
+the doorway with a ghostly arm outstretched. No farther
+would he follow, it seems. Except in dreams. He still
+haunts you in your dreams.</p>
+      <p>THE END</p>
+    </div>
+  </body>
+</html>
